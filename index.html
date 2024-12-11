@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <style>
+        /* Estilos Generales */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Fondo de la web con imagen y superposición oscura */
+            background: url('https://cdn.streamelements.com/uploads/176702d3-a685-4173-abf8-da1459be378e.PNG') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Superposición oscura */
+            z-index: -1;
+        }
+
+        /* Estilos de la cabecera */
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .logo {
+            height: 150px;
+            width: auto;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icons img {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Estilos del contenido central */
+        .main-content {
+            text-align: center;
+            padding: 40px 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .welcome-text {
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .promo-text {
+            margin-bottom: 40px;
+            font-size: 1.2em;
+            max-width: 800px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+
+        /* Estilos de la lista de botones */
+        .button-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .button-list a {
+            width: 100%;
+            padding: 15px 0;
+            background-color: #1e88e5;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .button-list a:hover {
+            background-color: #1565c0;
+            transform: translateY(-2px);
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .logo {
+                height: 120px; /* Reducir tamaño del logo */
+            }
+
+            .social-icons img {
+                width: 30px;
+                height: 30px;
+            }
+
+            .welcome-text {
+                font-size: 1.8em;
+            }
+
+            .promo-text {
+                font-size: 1em;
+            }
+
+            .button-list a {
+                font-size: 1em;
+                padding: 12px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                height: 100px; /* Tamaño más pequeño del logo */
+            }
+
+            .social-icons img {
+                width: 25px;
+                height: 25px;
+            }
+
+            .welcome-text {
+                font-size: 1.5em;
+            }
+
+            .promo-text {
+                font-size: 0.9em;
+            }
+
+            .button-list a {
+                font-size: 0.9em;
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+    <div class="header">
+        <div class="logo-container">
+            <img src="https://cdn.streamelements.com/uploads/fa3fe2b3-134b-4288-bfef-29948befc05f.png" alt="Logo" class="logo">
+            <div class="social-icons">
+                <a href="https://www.twitch.tv/piravision" target="_blank">
+                    <img src="https://cdn.streamelements.com/uploads/4e340b43-7b0e-4bad-81d4-197c233827c4.png" alt="Twitch">
+                </a>
+                <a href="https://kick.com/piravision" target="_blank">
+                    <img src="https://cdn.streamelements.com/uploads/9e660f91-49cb-476f-b328-8a1e5d9706ae.png" alt="Kick">
+                </a>
+                <a href="https://discord.gg/7VEzeTy55R" target="_blank">
+                    <img src="https://cdn.streamelements.com/uploads/e731c1a0-344f-432d-bbf8-0590844f7e25.png" alt="Discord">
+                </a>
+                <a href="https://x.com/PiraVision" target="_blank">
+                    <img src="https://cdn.streamelements.com/uploads/aecdfafd-fb1e-41d7-91ff-cc7d5cb34a32.png" alt="X (Twitter)">
+                </a>
+                <a href="https://t.me/+UD7ZygM3MrlhNjg0" target="_blank">
+                    <img src="https://cdn.streamelements.com/uploads/16594692-335f-470e-9beb-fd542023ec96.png" alt="Telegram">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido Central -->
+    <div class="main-content">
+        <div class="welcome-text">
+            Piraviewers! llega la PiraApp de los Retrofindes de Piravision!
+        </div>
+        <div class="promo-text">
+           Os presentamos la nueva función interactiva para disfrutar al máximo tus clásicos favoritos durante los fines de semana.
+        </div>
+        <div class="button-list">
+            <a href="https://piravision.github.io/Comandos/" target="_blank">COMANDOS</a>
+            <a href="https://piravision.github.io/Parilla/" target="_blank">PROGRAMACIÓN</a>
+            <a href="https://piravision.github.io/Peticiones/" target="_blank">PETICIÓN DE CONTENIDO</a>
+            <a href="https://piravision.github.io/Estrenos/" target="_blank">NUEVAS LLEGADAS</a>
+            <a href="https://piravision.github.io/Suscripciones/" target="_blank">SUSCRÍBETE</a>
+        </div>
+    </div>
+</body>
+</html>
